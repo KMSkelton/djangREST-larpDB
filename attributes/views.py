@@ -25,10 +25,6 @@ class AttributeDetail(APIView):
             raise Http404
 
     def get(self, request, pk, format=None):
-        content = {
-            'user': unicode(request.user),
-            'auth': unicode(request.auth)            
-        }
         snippet = self.get_object(pk)
         serializer = AttributeSerializer(snippet)
         return Response(serializer.data)
