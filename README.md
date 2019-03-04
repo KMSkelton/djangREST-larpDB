@@ -7,13 +7,22 @@ For local development
 Start a virtual environment:
 
 `python3 -m venv VenvDjango`
+
 `virtualenv venv_larp`
+
 `source venv_larp/bin/activate`
+
 `pip install -r requirements.txt`
+
 
 If the Django server can't find a table (but this is not your first time using this), try the following:
 
 Delete `db.sqlite3`
+
+Now is a good time to check settings.py for which database engine/name combo is running.
+
+For local hosting you'll want the sqlite database.
+
 
 Make the migrations for the 'attributes' app:
 
@@ -24,5 +33,7 @@ Next, migrate the database:
 `python manage.py migrate`
 
 Finally, enjoy the fruit of your labor:
+
 `python manage.py runserver`
+
 point your browser to localhost:8000/api/attribute
