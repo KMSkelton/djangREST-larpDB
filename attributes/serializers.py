@@ -7,6 +7,7 @@ class AttributeSerializer(serializers.ModelSerializer):
     # fields = "__all__"
     # can explicitly add the fields needed if not all are supposed to be included
     fields = (
+      'id',
       'attribute_name',
       'attribute_description'
     )
